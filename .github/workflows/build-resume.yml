@@ -17,30 +17,32 @@ jobs:
         with:
           root_file: resume.tex
 
-      - name: Rename PDF
-        run: mv resume.pdf "Ankush Kapoor resume.pdf"
-
-      - name: Upload PDF as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: resume-artifact
-          path: "Ankush Kapoor resume.pdf"
-
-      - name: Commit and push PDF to pdf/ folder
+      - name: Rename PDF and add to pdf/ dir
+        run: |
+          mkdir -p pdf
+          rm -f pdf/*.pdf
+          mv resume.pdf "pdf/Ankush Kapoor resume.pdf"
+        
+      - name: Convert PDF to PNG and add to img/ dir
+        run: |
+          sudo apt update
+          sudo apt install -y poppler-utils
+          mkdir -p img
+          rm -f img/*.png
+          pdftoppm -rx 300 -ry 300 "pdf/Ankush Kapoor resume.pdf" img/resume -png
+          
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          mkdir -p pdf
-          rm -f pdf/*.pdf
-          mv "Ankush Kapoor resume.pdf" pdf/
-
           git add pdf/
+          git add img/
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: update resume PDF"
+            git commit -m "chore: update resume PDF and PNG"
             git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
             git push
           fi
