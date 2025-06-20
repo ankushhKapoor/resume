@@ -1,7 +1,7 @@
 # Ankush Kapoor Resume
 
 <div align="center">
-  <img src="https://github.com/ankushhKapoor/resume/blob/main//img/Ankush%20Kapoor%20Resume.png" alt="Ankush Kapoor Resume Preview" style="width: 80%;" />
+  <img src="https://github.com/ankushhKapoor/resume/blob/main/img/Ankush%20Kapoor%20Resume.png" alt="Ankush Kapoor Resume Preview" style="width: 80%;" />
 </div>
 
 ---
