@@ -1,4 +1,4 @@
-name: Build LaTeX Resume
+name: Build and Upload LaTeX Resume
 
 on: [push]
 
@@ -15,11 +15,31 @@ jobs:
         with:
           root_file: resume.tex
 
-      - name: Rename output PDF
+      - name: Rename PDF
         run: mv resume.pdf "Ankush Kapoor resume.pdf"
 
-      - name: Upload PDF artifact
+      - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: PDF
+          name: resume-artifact
           path: "Ankush Kapoor resume.pdf"
+
+      - name: Commit and push PDF to pdf/ folder
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          mkdir -p pdf
+          rm -f pdf/*.pdf
+          mv "Ankush Kapoor resume.pdf" pdf/
+
+          git add pdf/
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update resume PDF"
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
