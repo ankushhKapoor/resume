@@ -30,6 +30,7 @@ jobs:
           mkdir -p img
           rm -f img/*.png
           pdftoppm -rx 300 -ry 300 "pdf/Ankush Kapoor resume.pdf" img/resume -png
+          mv img/resume-1.png img/Ankush Kapoor resume.png
           
       - name: Commit and push changes
         run: |
