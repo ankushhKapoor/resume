@@ -1,6 +1,8 @@
 name: Build and Upload LaTeX Resume
 
-on: [push]
+on:
+  push:
+  workflow_dispatch:  # Enable manual Run workflow button
 
 jobs:
   build_latex:
