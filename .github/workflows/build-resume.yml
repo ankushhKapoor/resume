@@ -21,7 +21,7 @@ jobs:
         run: |
           mkdir -p pdf
           rm -f pdf/*.pdf
-          mv resume.pdf "pdf/Ankush Kapoor resume.pdf"
+          mv resume.pdf "pdf/Ankush Kapoor Resume.pdf"
         
       - name: Convert PDF to PNG and add to img/ dir
         run: |
@@ -29,8 +29,8 @@ jobs:
           sudo apt install -y poppler-utils
           mkdir -p img
           rm -f img/*.png
-          pdftoppm -rx 300 -ry 300 "pdf/Ankush Kapoor resume.pdf" img/resume -png
-          mv "img/resume-1.png" "img/Ankush Kapoor resume.png"
+          pdftoppm -rx 300 -ry 300 "pdf/Ankush Kapoor Resume.pdf" img/resume -png
+          mv "img/resume-1.png" "img/Ankush Kapoor Resume.png"
           
       - name: Commit and push changes
         run: |
@@ -43,7 +43,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: update resume PDF and PNG"
+            git commit -m "chore: update Resume PDF and PNG files"
             git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
             git push
           fi
