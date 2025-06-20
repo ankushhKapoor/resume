@@ -18,4 +18,6 @@
 *.fls
 *.log
 *.fdb_latexmk
+# Ignore all PDFs except those inside pdf/
 *.pdf
+!pdf/*.pdf
