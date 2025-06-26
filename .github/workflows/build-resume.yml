@@ -35,6 +35,7 @@ jobs:
           mv "img/resume-1.png" "img/ankush-kapoor-resume.png"
           
       - name: Commit and push changes
+        id: push_check
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -43,6 +44,7 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
+            echo "deployed=false" >> $GITHUB_OUTPUT
           else
             git commit -m "chore: update Resume PDF and PNG files"
             git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
