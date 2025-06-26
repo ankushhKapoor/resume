@@ -40,6 +40,8 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+          echo "<!-- updated at $(date) -->" >> index.html
+
           git add -A
 
           if git diff --cached --quiet; then
