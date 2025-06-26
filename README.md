@@ -1,4 +1,4 @@
-# Ankush Kapoor Resume
+# Ankush Kapoor Résumé
 
 <div align="center">
   <img src="https://github.com/ankushhKapoor/resume/blob/main/img/ankush-kapoor-resume.png" alt="Ankush Kapoor Resume Preview" style="width: 80%;" />
