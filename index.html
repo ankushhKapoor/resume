@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Redirecting to Resume</title>
-    <link rel="icon" type="image/png" href="favicon.png" sizes="512x512">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-      window.onload = () => {
-        setTimeout(() => {
-          window.location.href = "pdf/ankush-kapoor-resume.pdf";
-        }, 400); // 400 ms delay
-      };
-    </script>
-  </head>
-  <body>
-    <p>If you're not redirected automatically, 
-      <a href="pdf/ankush-kapoor-resume.pdf">click here</a>.
-    </p>
-  </body>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Ankush Kapoor's Résumé</title>
+
+		<meta name="description" content="Computer Engineer Student" />
+		<meta name="author" content="Ankush Kapoor" />
+		<meta property="og:site_name" content="Ankush Kapoor" />
+		<meta property="og:title" content="Ankush Kapoor's Résumé" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="Computer Engineer Student" />
+		<meta property="og:url" content="https://resume-ankushhkapoor.vercel.app/" />
+		<meta
+			property="og:image"
+			itemprop="image"
+			content="https://resume-ankushhkapoor.vercel.app/static/img/og-img.png"
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="600" />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta
+			property="twitter:image"
+			content="https://resume-ankushhkapoor.vercel.app/static/img/og-img.png"
+		/>
+	</head>
+
+	<body>
+		Loading résumé PDF, please wait...
+		<br />
+		<br />
+		If the download doesn't start automatically, please download the résumé
+		PDF manually 👉
+		<a href="/pdf/ankush-kapoor-resume.pdf" download
+			>ankush-kapoor-resume.pdf</a
+		>
+
+		<script>
+			window.location = "/pdf/ankush-kapoor-resume.pdf";
+		</script>
+	</body>
 </html>
