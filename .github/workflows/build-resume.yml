@@ -19,20 +19,20 @@ jobs:
         with:
           root_file: resume.tex
 
-      - name: Rename PDF and add to pdf/ dir
+      - name: Rename PDF and add to public/pdf/ dir
         run: |
-          mkdir -p pdf
-          rm -f pdf/*.pdf
-          mv resume.pdf "pdf/ankush-kapoor-resume.pdf"
+          mkdir -p public/pdf
+          rm -f public/pdf/*.pdf
+          mv resume.pdf "public/pdf/ankush-kapoor-resume.pdf"
         
-      - name: Convert PDF to PNG and add to img/ dir
+      - name: Convert PDF to PNG and add to public/img/ dir
         run: |
           sudo apt update
           sudo apt install -y poppler-utils
-          mkdir -p img
-          rm -f img/*.png
-          pdftoppm -rx 300 -ry 300 "pdf/ankush-kapoor-resume.pdf" img/resume -png
-          mv "img/resume-1.png" "img/ankush-kapoor-resume.png"
+          mkdir -p public/img
+          rm -f public/img/*.png
+          pdftoppm -rx 300 -ry 300 "public/pdf/ankush-kapoor-resume.pdf" public/img/resume -png
+          mv "public/img/resume-1.png" "public/img/ankush-kapoor-resume.png"
           
       - name: Commit and push changes
         id: push_check
