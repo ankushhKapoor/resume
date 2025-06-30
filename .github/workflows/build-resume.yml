@@ -7,8 +7,9 @@ on:
 jobs:
   build_latex:
     runs-on: ubuntu-latest
-    outputs:
-      deployed: ${{ steps.push_check.outputs.deployed }}
+
+    # outputs:
+    # deployed: ${{ steps.push_check.outputs.deployed }}
 
     steps:
       - name: Checkout repository
@@ -40,7 +41,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          echo "<!-- updated at $(date) -->" >> index.html
+          # echo "<!-- updated at $(date) -->" >> index.html
 
           git add -A
 
@@ -51,15 +52,15 @@ jobs:
             git commit -m "chore: update Resume PDF and PNG files"
             git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
             git push
-            echo "deployed=true" >> $GITHUB_OUTPUT
+            # echo "deployed=true" >> $GITHUB_OUTPUT
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  vercel_deploy:
-    needs: build_latex
-    if: needs.build_latex.outputs.deployed == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Trigger Vercel Deployment
-        run: curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
+  # vercel_deploy:
+  #   needs: build_latex
+  #   if: needs.build_latex.outputs.deployed == 'true'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Trigger Vercel Deployment
+  #       run: curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
