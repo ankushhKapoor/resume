@@ -1,12 +1,13 @@
-%-------------------------
+% -------------------------
 % Resume in Latex
-% Author : Jake Gutierrez
+% Author: Jake Gutierrez
 % Based off of: https://github.com/sb2nov/resume
-% Customised by : Ankush Kapoor
-% Github repo : https://github.com/ankushhKapoor/resume
-% Hosted link : https://resume-ankushhkapoor.vercel.app
-% License : MIT
-%------------------------
+% License: MIT
+% ------------------------
+
+% ------------------------
+% Original Overleaf template: https://www.overleaf.com/latex/templates/jakes-resume-anonymous/cstpnrbkhndn
+% ------------------------
 
 \documentclass[letterpaper,11pt]{article}
 
@@ -15,50 +16,81 @@
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
-%----------FONT OPTIONS----------
-% Optional: you can uncomment and experiment with fonts here
+\usepackage{xcolor}
+\hypersetup{colorlinks,urlcolor=blue}
+
+
+% ----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+\usepackage{charter}
+% \usepackage{times}
+% \usepackage{helvet}
+
 
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
+
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting
+% Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
+% Ensure that the generated PDF is machine readable/ATS parsable.
 \pdfgentounicode=1
 
+% -------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{#1 \vspace{-2pt}}
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
 }
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \vspace{-2pt}\textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
@@ -67,120 +99,201 @@
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
+% -------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-%----------HEADING----------
+
+% ----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
 \begin{center}
-    \textbf{\Huge \scshape Ankush Kapoor} \\ \vspace{1pt}
-    \small +91 8108405154 $|$  \href{https://ankushhkapoor.vercel.app}{\underline{ankushhkapoor.vercel.app}} $|$
+    {\huge \scshape \textbf{Ankush Kapoor}} \\ \vspace{5pt}
+    \small
+    +91 8108405154 $|$  \href{https://ankushhkapoor.vercel.app}{\underline{ankushhkapoor.vercel.app}} $|$
     \href{mailto:work.ankushkapoor1626@gmail.com}{\underline{work.ankushkapoor1626@gmail.com}} \\
     \href{https://github.com/ankushhKapoor}{\underline{github.com/ankushhKapoor}} $|$
-    \href{https://linkedin.com/in/ankushhKapoor}{\underline{linkedin.com/in/ankushhKapoor}}
+    \href{https://linkedin.com/in/ankushhKapoor}{\underline{linkedin.com/in/ankushhKapoor}}    \vspace{-8pt}
 \end{center}
 
-%-----------EDUCATION-----------
+
+% -----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Vidyalankar Institute of Technology}{\textbf{Mumbai, India}}
-      {Bachelor of Technology in Computer Engineering}{Sept 2024 -- Present}
-    \resumeSubSubheading
-      {First Year - CGPA: \textbf{10.0}}{Second Year, currently ongoing}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+            {Vidyalankar Institute of Technology}{Mumbai, India}
+            {Bachelor of Technology in Computer Engineering}{Sept 2024 -- Present}
+            \resumeItemListStart
+                \resumeItem{First Year - CGPA: \textbf{10.0}}
+                \resumeItem{First Year - CGPA: \textbf{10.0} \hspace{3.984in} Second Year, currently ongoing}
+            \resumeItemListEnd
 
-    \resumeSubheading
-      {Seth Hirachand Mutha School (CBSE Board)}{\textbf{Kalyan, India}}
-      {Class XII - \textbf{86\%}}{2024}
-    \resumeSubSubheading
-      {Class X - \textbf{91\%}}{2022}
-  \resumeSubHeadingListEnd
+        \resumeSubheading
+            {Seth Hirachand Mutha School (CBSE Board)}{Kalyan, India}
+            {}{}
+            \vspace{-16pt}\resumeItemListStart
+                \resumeItem{Class XII - \textbf{86\%} \hspace{5.984in} 2024}
+                \resumeItem{Class X - \textbf{91\%} \hspace{6.083in} 2022}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+% \vspace{-18pt}
+\vspace{-15pt}
 
-%-----------EXPERIENCE-----------
+
+% -----------EXPERIENCE-----------
 \section{Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Open World Holidays Framework (Open Source Contributor)}{Jan 2025 -- June 2025}
-      {Python Framework}{Remote — \href{https://github.com/vacanza/holidays/pulls/ankushhKapoor}{\underline{PRs}}}
-      \resumeItemListStart
-        \resumeItem{Ranked \textbf{7th out of 2300+ contributors} nationally in Google Winter of Code (WoC) 2024.}
-        \resumeItem{Added public holidays for \textbf{India}, \textbf{Nepal}, and \textbf{Mongolia}, covering fixed-date, variable-date, and lunar calendar-based rules.}
-        \resumeItem{Implemented \textbf{Hindi} and \textbf{Mongolian} translations to improve localization and accessibility.}
-        \resumeItem{Wrote and maintained comprehensive \textbf{unit tests} to validate dynamic holiday calculations.}
-        \resumeItem{Contributed to a large-scale \textbf{Python-based database} and participated in detailed code reviews.}
-        \resumeItem{Technologies: \textbf{Python}, \textbf{Git}, \textbf{GitHub}, \textbf{Data Processing}, \textbf{Open Source Collaboration}}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+    \resumeSubHeadingListStart
+        \resumeSubheading
+        {Open World Holidays Framework (Open Source Contributor)}{Jan 2025 -- June 2025}
+        {Python Framework}{Remote — \href{https://github.com/vacanza/holidays/pulls/ankushhKapoor}{\underline{PRs}}}
+        \resumeItemListStart
+            \resumeItem{Ranked \textbf{7th out of 2300+ contributors} nationally in Google Winter of Code (WoC) 2024.}
+            \resumeItem{Added public holidays for \textbf{India}, \textbf{Nepal}, and \textbf{Mongolia}, covering fixed-date, variable-date, and lunar calendar-based rules.}
+            \resumeItem{Implemented \textbf{Hindi} and \textbf{Mongolian} translations to improve localization and accessibility.}
+            \resumeItem{Wrote and maintained comprehensive \textbf{unit tests} to validate dynamic holiday calculations.}
+            \resumeItem{Contributed to a large-scale \textbf{Python-based database} and participated in detailed code reviews.}
+            \resumeItem{Technologies: \textbf{Python}, \textbf{Git}, \textbf{GitHub}, \textbf{Data Processing}, \textbf{Open Source Collaboration}}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+% \vspace{-12pt}
 
-%-----------PROJECTS-----------
+
+% -----------INTERNSHIPS-----------
+% \section{Internships}
+%     \resumeSubHeadingListStart
+%         \resumeSubheading
+%             {Advanced Micro Devices (AMD), Inc.}{May 2023 -- Aug 2023}
+%             {Field Applications Engineering Intern}{Austin, TX, USA}
+%             \resumeItemListStart
+%                 \resumeItem{Built a proof-of-concept web app to provision and manage virtual machines configured with user public keys, persistent storage and VNC to reduce server issue debug time, using KVM, Bash scripts, Express.js and React.js}
+%                 \resumeItem{Benchmarked network bandwidth (iperf3), memory bandwidth (STREAM) and CPU performance (DGEMM) of servers}
+%             \resumeItemListEnd
+
+%         \resumeSubheading
+%             {NanoNet Technologies Inc.}{Aug 2021 -- Nov 2021}
+%             {Software Intern}{Remote}
+%             \resumeItemListStart
+%                 \resumeItem{Published \href{https://www.npmjs.com/package/@nanonets/optical-character-recognition}{OCR} and \href{https://www.npmjs.com/package/@nanonets/image-classification}{Image Classification} SDKs to improve development time by 50\%}
+%                 \resumeItem{Enhanced documentation by enforcing the OpenAPI 3.1.0 standard and adding situational code samples}
+%             \resumeItemListEnd
+%     \resumeSubHeadingListEnd
+% \vspace{-15pt}
+
+
+% -----------PROJECTS-----------
 \section{Projects}
-  \resumeSubHeadingListStart
+    \vspace{-6pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{\normalsize{KapoorVM (Custom Virtual Machine in C)}} $|$ \emph{C, Linux, GCC, Git}}{\href{https://github.com/ankushhKapoor/KapoorVM}{\underline{GitHub}}}
+            \resumeItemListStart
+                \resumeItem{Built a 16-bit virtual CPU with a custom instruction set and 65 KB of virtual memory.}
+                \resumeItem{Implemented basic opcodes to move immediate values into registers and run a test program.}
+                \resumeItem{Designed modular VM components for clean separation of CPU, memory, and instruction handling.}
+            \resumeItemListEnd
+        \vspace{-15pt}
 
-    \resumeProjectHeading
-      {\textbf{KapoorVM (Custom Virtual Machine in C)} $|$ \emph{C, Linux, GCC, Git}}{\href{https://github.com/ankushhKapoor/KapoorVM}{\underline{GitHub}}}
-      \resumeItemListStart
-        \resumeItem{Built a 16-bit virtual CPU with a custom instruction set and 65 KB of virtual memory.}
-        \resumeItem{Implemented basic opcodes to move immediate values into registers and run a test program.}
-        \resumeItem{Designed modular VM components for clean separation of CPU, memory, and instruction handling.}
-      \resumeItemListEnd
-
-    \resumeProjectHeading
-      {\textbf{Alloc (Custom Memory Allocator in C)} $|$ \emph{C, Linux, NASM, GCC}}{\href{https://github.com/ankushhKapoor/alloc}{\underline{GitHub}}}
-      \resumeItemListStart
+        \resumeProjectHeading
+            {\textbf{\normalsize{Alloc (Custom Memory Allocator in C)}} $|$ \emph{C, Linux, NASM, GCC}}{\href{https://github.com/ankushhKapoor/alloc}{\underline{GitHub}}}
+            \resumeItemListStart
         \resumeItem{Created a 32-bit allocator mimicking \texttt{malloc()} and \texttt{free()} over a 1 GB virtual heap.}
-        \resumeItem{Implemented \texttt{alloc(bytes)} to allocate memory in words by taking size in bytes as input.}
-        \resumeItem{Added \texttt{destroy()} for secure deallocation with memory zeroing to prevent data leakage.}
-        \resumeItem{Built packed headers, manual tracking, macros for KB/MB/GB allocation, and a \texttt{show()} debugger.}
-      \resumeItemListEnd
+                \resumeItem{Implemented \texttt{alloc(bytes)} to allocate memory in words by taking size in bytes as input.}
+                \resumeItem{Added \texttt{destroy()} for secure deallocation with memory zeroing to prevent data leakage.}
+                \resumeItem{Built packed headers, manual tracking, macros for KB/MB/GB allocation, and a \texttt{show()} debugger.}
+            \resumeItemListEnd
+        \vspace{-15pt}
 
-    \resumeProjectHeading
-      {\textbf{CodeNexus (Custom Code Editor in Python)} $|$ \emph{Python, PyQt5, QScintilla, Jedi}}{\href{https://github.com/ankushhKapoor/CodeNexus-Custom-Python-Editor-IDE}{\underline{GitHub}}}
-      \resumeItemListStart
-        \resumeItem{Developed a tab-based code editor with syntax highlighting, file explorer, and autocomplete.}
-        \resumeItem{Implemented a threaded \textbf{AutoCompleter} using \textbf{jedi} and a custom \textbf{QsciLexer}.}
-        \resumeItem{Enabled one-click code execution via \textbf{subprocess} in CMD.}
-        \resumeItem{Integrated file actions with \textbf{QTreeView} and added keyboard shortcuts.}
-      \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{\normalsize{CodeNexus (Custom Code Editor for Python)}} $|$ \emph{Python, PyQt5, QScintilla, Jedi}}{\href{https://github.com/ankushhKapoor/CodeNexus-Custom-Python-Editor-IDE}{\underline{GitHub}}}
+            \resumeItemListStart
+                \resumeItem{Developed a tab-based code editor with syntax highlighting, file explorer, and autocomplete.}
+                \resumeItem{Implemented a threaded AutoCompleter using \texttt{jedi} and a custom \texttt{QsciLexer}.}
+                \resumeItem{Enabled one-click code execution via \texttt{subprocess} in CMD.}
+                \resumeItem{Integrated file actions with \texttt{QTreeView} and added keyboard shortcuts.}
+            \resumeItemListEnd
+        \vspace{-15pt}
 
-    \resumeProjectHeading
-      {\textbf{Email Unsubscriber (Inbox Automation Tool)} $|$ \emph{Python, IMAP, SMTP, BeautifulSoup, requests}}{\href{https://github.com/ankushhKapoor/Python-Email-Auto-Unsubscriber}{\underline{GitHub}}}
-      \resumeItemListStart
-        \resumeItem{Automated email unsubscription by scanning Gmail inbox via IMAP and locating unsubscribe links.}
-        \resumeItem{Parsed links using \textbf{BeautifulSoup} and text-matching logic.}
-        \resumeItem{Visited each link via \textbf{requests} and logged success/failure locally.}
-        \resumeItem{Used \texttt{dotenv} to securely manage credentials.}
-      \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{\normalsize{Email Unsubscriber (Inbox Automation Tool)}} $|$ \emph{Python, IMAP, SMTP, BeautifulSoup, requests}}{\href{https://github.com/ankushhKapoor/Python-Email-Auto-Unsubscriber}{\underline{GitHub}}}
+            \resumeItemListStart
+                \resumeItem{Automated email unsubscription by scanning Gmail inbox via IMAP and locating unsubscribe links.}
+                \resumeItem{Parsed links using \texttt{BeautifulSoup} and text-matching logic.}
+                \resumeItem{Visited each link via \texttt{requests} and logged success/failure locally.}
+                \resumeItem{Used \texttt{dotenv} to securely manage credentials.}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
 
-  \resumeSubHeadingListEnd
 
-%-----------SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python, C, Java, MySQL, HTML, CSS} \\
-     \textbf{Tools \& Environments}{: Git, GitHub, Linux (Ubuntu/WSL, VirtualBox), VS Code, Neovim, tmux, IntelliJ IDEA} \\
-     \textbf{Frameworks}{: Tailwind CSS}
-    }}
- \end{itemize}
+% -----------EXTRACURRICULAR ACTIVITY-----------
+% \section{Extracurricular Activity}
+%     \resumeSubHeadingListStart
+%         \resumeSubheading
+%             {\textbf{\normalsize{Our Tech Community (OTC)}} $|$ {\normalfont \href{https://ourtech.community}{ourtech.community}}}{Jan 2020 -- present}
+%             {Organiser}{}
+%             \resumeItemListStart
+%                 \resumeItem{Started a Tech-focused community with 500+ current members}
+%                 \resumeItem{Hosted 800+ hours of \href{https://catchup.ourtech.community}{OTC CatchUp} sessions involving technical discussions, project showcases and talks}
+%             \resumeItemListEnd
+
+%         \resumeSubheading
+%             {\textbf{\normalsize{Talks}} $|$ {\normalfont \href{https://talks.harshkapadia.me}{talks.harshkapadia.me}}}{}
+%             {}{}
+%             \vspace{-15pt}
+%             \resumeItemListStart
+%                 \resumeItem{Impacted 700+ people through talks on \href{https://talks.harshkapadia.me/elf}{ELF files}, \href{https://talks.harshkapadia.me/git_internals}{Git internals}, \href{https://talks.harshkapadia.me/mac-and-ip-routing}{routing using IP and MAC addresses}, and more}
+%             \resumeItemListEnd
+
+%         \resumeSubheading
+%             {\textbf{\normalsize{Articles}}}{}
+%             {}{}
+%             \vspace{-15pt}
+%             \resumeItemListStart
+%                 \resumeItem{Wrote articles on \href{https://git.harshkapadia.me}{Git}, \href{https://talks.harshkapadia.me/elf/content}{ELF files}, \href{https://networking.harshkapadia.me/ssh}{SSH}, \href{https://talks.harshkapadia.me/mac-and-ip-routing/content}{IP and MAC routing}, \href{https://networking.harshkapadia.me/files/homa/report}{Homa}, \href{https://networking.harshkapadia.me/tls}{TLS} and more}
+%             \resumeItemListEnd
+%     \resumeSubHeadingListEnd
+
+
+    
+% -----------SKILLS-----------
+\section{Skills}
+    \vspace{-2pt}
+    \begin{itemize}[leftmargin=0.2in, label={}]
+        {\item{
+            \begin{tabular}{ l@{\hskip 0.2in} l }
+                 \textbf{Languages}{: C, Python, Java, MySQL, HTML, CSS} \\
+                \textbf{Tools \& Environments}{: Git, GitHub, Linux (Ubuntu/WSL, VirtualBox), VS Code, Neovim, tmux, IntelliJ IDEA} \\
+                \textbf{Frameworks}{: Tailwind CSS}
+            \end{tabular}
+        }}
+    \end{itemize}
+\vspace{-20pt}
+
 
 \end{document}
