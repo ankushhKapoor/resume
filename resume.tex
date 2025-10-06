@@ -67,8 +67,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-3pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % Ensure that the generated PDF is machine readable/ATS parsable.
 \pdfgentounicode=1
@@ -77,13 +77,13 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{-3pt}}
   }
 }
 
 \newcommand{\classesList}[4]{
     \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
+        {#1 #2 #3 #4 \vspace{-3pt}}
   }
 }
 
@@ -92,24 +92,24 @@
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \vspace{-2pt}\textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
+    \end{tabular*}\vspace{-8pt}
+} % education, experience heading and first line ka vsapce
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-8pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
+\newcommand{\resumeProjectHeading}[2]{ 
     \item
     \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
-}
+    \end{tabular*}\vspace{-8pt}
+} % project heading and first line ka vsapce
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-9pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -117,7 +117,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-9pt}}
 
 % -------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -133,7 +133,7 @@
 % \end{tabular*}
 
 \begin{center}
-    {\huge \scshape \textbf{Ankush Kapoor}} \\ \vspace{3pt}
+    {\huge \scshape \textbf{Ankush Kapoor}} \\ \vspace{1pt}
     \small
     +91 8108405154 $|$  \href{https://ankushhkapoor.vercel.app}{\underline{ankushhkapoor.vercel.app}} $|$
     \href{mailto:work.ankushkapoor1626@gmail.com}{\underline{work.ankushkapoor1626@gmail.com}} \\
@@ -211,7 +211,17 @@
     \vspace{-6pt}
     \resumeSubHeadingListStart
         \resumeProjectHeading
-            {\textbf{\normalsize{KapoorVM (Custom Virtual Machine in C)}} $|$ \emph{C, Linux, GCC, Git}}{\href{https://github.com/ankushhKapoor/KapoorVM}{\underline{GitHub}}}
+            {\textbf{\normalsize{BaseKernel (Custom 32 bit Kernel)}} $|$ \emph{C, NASM, QEMU, GCC, Linux}}{\href{https://github.com/ankushhKapoor/BaseKernel}{\underline{GitHub}}}
+            \resumeItemListStart
+                \resumeItem{Built a 32-bit protected mode kernel from scratch following the 539kernel guide.}
+                \resumeItem{Implemented bootloader, GDT, IDT, ISR, and IRQ handling for low-level system control.}
+                \resumeItem{Added memory paging, screen output, and multitasking, refining system control and responsiveness.}
+                \resumeItem{Developed entirely without standard libraries to achieve bare-metal execution.}
+            \resumeItemListEnd
+        \vspace{-15pt}
+
+        \resumeProjectHeading
+            {\textbf{\normalsize{KapoorVM (Custom Virtual Machine in C)}} $|$ \emph{C, Linux, GCC}}{\href{https://github.com/ankushhKapoor/KapoorVM}{\underline{GitHub}}}
             \resumeItemListStart
                 \resumeItem{Built a 16-bit virtual CPU with a custom instruction set and 65 KB of virtual memory.}
                 \resumeItem{Implemented basic opcodes to move immediate values into registers and run a test program.}
