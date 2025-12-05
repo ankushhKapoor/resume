@@ -56,7 +56,7 @@
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
+\addtolength{\topmargin}{-.55in}
 \addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
@@ -149,17 +149,17 @@
             {Vidyalankar Institute of Technology}{Mumbai, India}
             {Bachelor of Technology in Computer Engineering}{Sept 2024 -- Present}
             \resumeItemListStart
-                \resumeItem{First Year - CGPA: \textbf{10.0}}
-                \resumeItem{Second Year, currently ongoing}
+                \resumeItem{CGPA: \textbf{10.0} (First Year), SGPS: \textbf{10.0} (Sem 3)}
+                \resumeItem{Expected Graduation: \textbf{2028}}
             \resumeItemListEnd
 
-        \resumeSubheading
-            {Seth Hirachand Mutha School (CBSE Board)}{Kalyan, India}
-            {}{}
-            \vspace{-16pt}\resumeItemListStart
-                \resumeItem{Class XII - \textbf{86\%} \hspace{5.984in} 2024}
-                \resumeItem{Class X - \textbf{91\%} \hspace{6.083in} 2022}
-            \resumeItemListEnd
+        % \resumeSubheading
+        %     {Seth Hirachand Mutha School (CBSE Board)}{Kalyan, India}
+        %     {}{}
+        %     \vspace{-16pt}\resumeItemListStart
+        %         \resumeItem{Class XII - \textbf{86\%} \hspace{5.984in} 2024}
+        %         \resumeItem{Class X - \textbf{91\%} \hspace{6.083in} 2022}
+        %     \resumeItemListEnd
     \resumeSubHeadingListEnd
 % \vspace{-18pt}
 \vspace{-15pt}
@@ -167,19 +167,18 @@
 
 % -----------EXPERIENCE-----------
 \section{Experience}
-    \resumeSubHeadingListStart
-        \resumeSubheading
-        {Open World Holidays Framework (Open Source Contributor)}{Jan 2025 -- June 2025}
-        {Python Framework}{Remote — \href{https://github.com/vacanza/holidays/pulls/ankushhKapoor}{\underline{GitHub PRs}}}
-        \resumeItemListStart
-            \resumeItem{Ranked \textbf{7th out of 2300+ contributors} nationally in Google Winter of Code (WoC) 2024.}
-            \resumeItem{Added public holidays for \textbf{India},\kern0.1em\textbf{Nepal},\kern0.1emand\kern0.2em\textbf{Mongolia}, covering fixed and variable dates, and lunar calendar-based rules.}
-            \resumeItem{Implemented \textbf{Hindi} and \textbf{Mongolian} translations to improve localization and accessibility.}
-            \resumeItem{Wrote and maintained comprehensive \textbf{unit tests} to validate dynamic holiday calculations.}
-            \resumeItem{Contributed to a large-scale \textbf{Python-based database} and participated in detailed code reviews.}
-            \resumeItem{Technologies: \textbf{Python}, \textbf{Git}, \textbf{GitHub}, \textbf{Data Processing}, \textbf{Open Source Collaboration}}
-        \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+    \resumeSubheading
+    {Open World Holidays Framework}{Jan 2025 -- June 2025}
+    {Open Source Contributor (GWoC Top 1\%) \& Paid Contributor}{Remote}
+    \resumeItemListStart
+        \resumeItem{Achieved \textbf{Rank 7 out of 2300+ contributors} in Google Winter of Code (GWoC) '24; top-tier performance led to a \textbf{paid sponsored task} to implement \textbf{Mongolian holidays}.}
+        \resumeItem{Engineered a \textbf{lunar calendar} specifically for \textbf{Mongolia}, while extending pre-existing date systems to support complex holiday logic for \textbf{India} and \textbf{Nepal} to support \textbf{249 countries} in a library with \textbf{20M+ monthly} PyPI downloads.}
+        \resumeItem{Implemented \textbf{localization (l10n)} efforts by implementing Hindi and Mongolian translations, ensuring native-language accessibility for regional users.}
+        % \resumeItem{Authored comprehensive \textbf{unit tests} to validate dynamic holiday calculations, ensuring stability across large-scale database updates.}
+        \resumeItem{\textbf{Technologies:} Python, Pytest, l10n, Git , GitHub}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 \vspace{-15pt}
 % \vspace{-12pt}
 
@@ -213,9 +212,9 @@
         \resumeProjectHeading
             {\textbf{\normalsize{BaseKernel (Custom 32 bit Kernel)}} $|$ \emph{C, NASM, QEMU, GCC, Linux}}{\href{https://github.com/ankushhKapoor/BaseKernel}{\underline{GitHub}}}
             \resumeItemListStart
-                \resumeItem{Built a 32-bit protected mode kernel from scratch following the 539kernel guide.}
-                \resumeItem{Implemented bootloader, GDT, IDT, ISR, and IRQ handling for low-level system control.}
-                \resumeItem{Added memory paging, screen output, and multitasking, refining system control and responsiveness.}
+                \resumeItem{Built a \textbf{32-bit protected mode} kernel from scratch.}
+            \resumeItem{Implemented \textbf{bootloader}, \textbf{GDT}, \textbf{IDT}, \textbf{ISR}, and \textbf{IRQ} handling for low-level system control.}
+                \resumeItem{Added \textbf{memory paging}, \textbf{screen output} along with a \textbf{Round Robin scheduler} to enable fair CPU time allocation across tasks.}
                 \resumeItem{Developed entirely without standard libraries to achieve bare-metal execution.}
             \resumeItemListEnd
         \vspace{-15pt}
@@ -232,10 +231,10 @@
         \resumeProjectHeading
             {\textbf{\normalsize{Alloc (Custom Memory Allocator in C)}} $|$ \emph{C, Linux, NASM, GCC}}{\href{https://github.com/ankushhKapoor/alloc}{\underline{GitHub}}}
             \resumeItemListStart
-        \resumeItem{Created a 32-bit allocator mimicking \texttt{malloc()} and \texttt{free()} over a 1 GB virtual heap.}
-                \resumeItem{Implemented \texttt{alloc(bytes)} to allocate memory in words by taking size in bytes as input.}
-                \resumeItem{Added \texttt{destroy()} for secure deallocation with memory zeroing to prevent data leakage.}
-                \resumeItem{Built packed headers, manual tracking, macros for KB/MB/GB allocation, and a \texttt{show()} debugger.}
+        \resumeItem{Created a 32-bit allocator mimicking \textbf{malloc()} and \textbf{free()} over a 1 GB virtual heap.}
+                \resumeItem{Implemented \textbf{alloc(bytes)} to allocate memory in words by taking size in bytes as input.}
+                \resumeItem{Added \textbf{destroy()} for secure deallocation with memory zeroing to prevent data leakage, ensuring data privacy.}
+                \resumeItem{Built packed headers, manual tracking, macros for KB/MB/GB allocation, and a \textbf{show()} debugger.}
             \resumeItemListEnd
         \vspace{-15pt}
 
@@ -243,17 +242,17 @@
             {\textbf{\normalsize{Advanced Research AI Agent}} $|$ \emph{Python, LangGraph, Ollama, BrightData API}}{\href{https://github.com/ankushhKapoor/Advanced-Research-AI-Agent}{\underline{GitHub}}}
             \resumeItemListStart
                 \resumeItem{Built an AI research assistant that retrieves data from Google, Bing, and Reddit to generate context-rich answers.}
-                \resumeItem{Used \texttt{LangGraph} for workflow orchestration and \texttt{Ollama LLM} for multi-source reasoning and synthesis.}
-                \resumeItem{Integrated \texttt{BrightData APIs} for automated web search and Reddit discussion analysis.}
+                \resumeItem{Used \textbf{LangGraph} for workflow orchestration and \textbf{Ollama LLM} for multi-source reasoning and synthesis.}
+                \resumeItem{Integrated \textbf{BrightData APIs} for automated web search and Reddit discussion analysis.}
             \resumeItemListEnd
         \vspace{-15pt}
 
         \resumeProjectHeading
-            {\textbf{\normalsize{WikiSpeedRunner (AI Wikipedia Speedrun Agent)}} $|$ \emph{Python, SBERT, Gemini API, Playwright}}{\href{https://github.com/ankushhKapoor/WikiSpeedRunner}{\underline{GitHub}}}
+            {\textbf{\normalsize{WikiSpeedRunner}} $|$ \emph{Python, SBERT, Gemini API, Playwright}}{\href{https://github.com/ankushhKapoor/WikiSpeedRunner}{\underline{GitHub}}}
             \resumeItemListStart
                 \resumeItem{Built an agent that speedruns through Wikipedia pages by selecting the most relevant outgoing link at each step.}
-                \resumeItem{Implemented two players: a fast \texttt{SBERT} vector-similarity model and a reasoning-based \texttt{Gemini LLM} agent for accurate pathfinding.}
-                \resumeItem{Automated gameplay using \texttt{Playwright}: scrolling, locating links, expanding collapsible sections, highlighting targets, and clicking pages.}
+                \resumeItem{Implemented two players: a fast \textbf{SBERT} vector-similarity model and a reasoning-based \textbf{Gemini LLM} agent for accurate pathfinding.}
+                \resumeItem{Automated gameplay using \textbf{Playwright}: scrolling, locating links, expanding collapsible sections, highlighting targets, and clicking pages.}
                 \resumeItem{Added run tracking with JSON logging, performance metrics, and optional browser visualisation for real-time playback.}
             \resumeItemListEnd
         \resumeSubHeadingListEnd
@@ -264,9 +263,9 @@
 %             {\textbf{\normalsize{CodeNexus (Custom Code Editor for Python)}} $|$ \emph{Python, PyQt5, QScintilla, Jedi}}{\href{https://github.com/ankushhKapoor/CodeNexus-Custom-Python-Editor-IDE}{\underline{GitHub}}}
 %             \resumeItemListStart
 %                 \resumeItem{Developed a tab-based code editor with syntax highlighting, file explorer, and autocomplete.}
-%                 \resumeItem{Implemented a threaded AutoCompleter using \texttt{jedi} and a custom \texttt{QsciLexer}.}
-%                 \resumeItem{Enabled one-click code execution via \texttt{subprocess} in CMD.}
-%                 \resumeItem{Integrated file actions with \texttt{QTreeView} and added keyboard shortcuts.}
+%                 \resumeItem{Implemented a threaded AutoCompleter using \textbf{jedi} and a custom \textbf{QsciLexer}.}
+%                 \resumeItem{Enabled one-click code execution via \textbf{subprocess} in CMD.}
+%                 \resumeItem{Integrated file actions with \textbf{QTreeView} and added keyboard shortcuts.}
 %             \resumeItemListEnd
 %     \resumeSubHeadingListEnd
 % \vspace{-15pt}
@@ -279,7 +278,8 @@
             {\textbf{\normalsize{Our Tech Community (OTC)}} $|$ {\normalfont \href{https://ourtech.community}{ourtech.community}}}{Jul 2025 -- Present}
             {Core Team Member}{}
             \resumeItemListStart
-                \resumeItem{As part of the OTC core team, contribute to overseeing flagship initiatives such as CatchUps, Talks, and organizational operations, driving collaboration within the tech community.}
+                \resumeItem{Contribute to planning, organizing, and executing OTC’s flagship programs including weekly \href{https://catchup.ourtech.community/}{catchups}, technical \href{https://talks.ourtech.community/}{talks}.}
+                \resumeItem{Support community operations by assisting with technical setup and maintenance for OTC events to ensure smooth execution and accessible documentation.}
                 \resumeItem{Manage and grow a vibrant, inclusive, and open for all tech-driven community.}
             \resumeItemListEnd
     \resumeSubHeadingListEnd
@@ -292,8 +292,10 @@
     \begin{itemize}[leftmargin=0.2in, label={}]
         {\item{
             \begin{tabular}{ l@{\hskip 0.2in} l }
-                 \textbf{Languages}{: C, Python, Java, MySQL, HTML, CSS} \\
-                \textbf{Tools \& Environments}{: Git, GitHub, Makefile, Linux, Windows, VS Code, Neovim} \\
+                \textbf{Languages}{: C, Python, Assembly, Java, MySQL} \\
+                % \textbf{Libraries}{: LangGraph, Ollama, SBERT, Playwright} \\
+                \textbf{Developer Tools}{: Git, GitHub, Makefile, VS Code, Neovim} \\
+                % \textbf{Operating Systems}{: Linux (Ubuntu), Windows}
                 % \textbf{Frameworks}{: }
             \end{tabular}
         }}
