@@ -153,13 +153,13 @@
                 \resumeItem{Expected Graduation: \textbf{2028}}
             \resumeItemListEnd
 
-        % \resumeSubheading
-        %     {Seth Hirachand Mutha School (CBSE Board)}{Kalyan, India}
-        %     {}{}
-        %     \vspace{-16pt}\resumeItemListStart
-        %         \resumeItem{Class XII - \textbf{86\%} \hspace{5.984in} 2024}
-        %         \resumeItem{Class X - \textbf{91\%} \hspace{6.083in} 2022}
-        %     \resumeItemListEnd
+        \resumeSubheading
+            {Seth Hirachand Mutha School (CBSE Board)}{Kalyan, India}
+            {}{}
+            \vspace{-16pt}\resumeItemListStart
+                \resumeItem{Class XII - \textbf{86\%} \hspace{5.984in} 2024}
+                \resumeItem{Class X - \textbf{91\%} \hspace{6.083in} 2022}
+            \resumeItemListEnd
     \resumeSubHeadingListEnd
 % \vspace{-18pt}
 \vspace{-15pt}
@@ -210,9 +210,21 @@
     \vspace{-6pt}
     \resumeSubHeadingListStart
         \resumeProjectHeading
+            {\textbf{\normalsize{Transformer From Scratch (Neural Machine Translation)}} $|$ \emph{Python, PyTorch, CUDA, TensorBoard}}{\href{https://github.com/ankushhKapoor/transformer-from-scratch}{\underline{GitHub}}}
+            \resumeItemListStart
+                \resumeItem{Implemented complete \textbf{Transformer architecture from scratch} based on \textbf{Attention Is All You Need}, using \textbf{PyTorch}.}
+                \resumeItem{Built \textbf{multi-head self/cross attention}, \textbf{encoder–decoder blocks}, \textbf{positional encoding}, \textbf{feed forward}, \textbf{masking}, and \textbf{projection layers manually}.}
+                \resumeItem{Trained a bilingual \textbf{NMT model} on \textbf{OPUS Books} with configurable language pairs, achieving strong translation quality using \textbf{greedy} and \textbf{beam search decoding}.}
+                \resumeItem{Implemented \textbf{learning-rate warmup + inverse square-root decay}, \textbf{label smoothing}, checkpointing, and resume logic.}
+                \resumeItem{Evaluated models using \textbf{SacreBLEU}, \textbf{WER}, and \textbf{CER}, with full experiment tracking via \textbf{TensorBoard}.}
+            \resumeItemListEnd
+        \vspace{-15pt}
+
+
+        \resumeProjectHeading
             {\textbf{\normalsize{BaseKernel (Custom 32 bit Kernel)}} $|$ \emph{C, NASM, QEMU, GCC, Linux}}{\href{https://github.com/ankushhKapoor/BaseKernel}{\underline{GitHub}}}
             \resumeItemListStart
-                \resumeItem{Built a \textbf{32-bit protected mode} kernel from scratch.}
+                \resumeItem{Built a \textbf{32-bit protected mode} kernel from scratch, \textbf{bootstrapped} from \textbf{real mode}.}
             \resumeItem{Implemented \textbf{bootloader}, \textbf{GDT}, \textbf{IDT}, \textbf{ISR}, and \textbf{IRQ} handling for low-level system control.}
                 \resumeItem{Added \textbf{memory paging}, \textbf{screen output} along with a \textbf{Round Robin scheduler} to enable fair CPU time allocation across tasks.}
                 \resumeItem{Developed entirely without standard libraries to achieve bare-metal execution.}
@@ -236,28 +248,28 @@
                 \resumeItem{Added \textbf{destroy()} for secure deallocation with memory zeroing to prevent data leakage, ensuring data privacy.}
                 \resumeItem{Built packed headers, manual tracking, macros for KB/MB/GB allocation, and a \textbf{show()} debugger.}
             \resumeItemListEnd
-        \vspace{-15pt}
-
-        \resumeProjectHeading
-            {\textbf{\normalsize{Advanced Research AI Agent}} $|$ \emph{Python, LangGraph, Ollama, BrightData API}}{\href{https://github.com/ankushhKapoor/Advanced-Research-AI-Agent}{\underline{GitHub}}}
-            \resumeItemListStart
-                \resumeItem{Built an AI research assistant that retrieves data from Google, Bing, and Reddit to generate context-rich answers.}
-                \resumeItem{Used \textbf{LangGraph} for workflow orchestration and \textbf{Ollama LLM} for multi-source reasoning and synthesis.}
-                \resumeItem{Integrated \textbf{BrightData APIs} for automated web search and Reddit discussion analysis.}
-            \resumeItemListEnd
-        \vspace{-15pt}
-
-        \resumeProjectHeading
-            {\textbf{\normalsize{WikiSpeedRunner}} $|$ \emph{Python, SBERT, Gemini API, Playwright}}{\href{https://github.com/ankushhKapoor/WikiSpeedRunner}{\underline{GitHub}}}
-            \resumeItemListStart
-                \resumeItem{Built an agent that speedruns through Wikipedia pages by selecting the most relevant outgoing link at each step.}
-                \resumeItem{Implemented two players: a fast \textbf{SBERT} vector-similarity model and a reasoning-based \textbf{Gemini LLM} agent for accurate pathfinding.}
-                \resumeItem{Automated gameplay using \textbf{Playwright}: scrolling, locating links, expanding collapsible sections, highlighting targets, and clicking pages.}
-                \resumeItem{Added run tracking with JSON logging, performance metrics, and optional browser visualisation for real-time playback.}
-            \resumeItemListEnd
         \resumeSubHeadingListEnd
-    \vspace{-15pt}
+        \vspace{-15pt}
 
+    %     \resumeProjectHeading
+    %         {\textbf{\normalsize{Advanced Research AI Agent}} $|$ \emph{Python, LangGraph, Ollama, BrightData API}}{\href{https://github.com/ankushhKapoor/Advanced-Research-AI-Agent}{\underline{GitHub}}}
+    %         \resumeItemListStart
+    %             \resumeItem{Built an AI research assistant that retrieves data from Google, Bing, and Reddit to generate context-rich answers.}
+    %             \resumeItem{Used \textbf{LangGraph} for workflow orchestration and \textbf{Ollama LLM} for multi-source reasoning and synthesis.}
+    %             \resumeItem{Integrated \textbf{BrightData APIs} for automated web search and Reddit discussion analysis.}
+    %         \resumeItemListEnd
+    %     \vspace{-15pt}
+
+    %     \resumeProjectHeading
+    %         {\textbf{\normalsize{WikiSpeedRunner}} $|$ \emph{Python, SBERT, Gemini API, Playwright}}{\href{https://github.com/ankushhKapoor/WikiSpeedRunner}{\underline{GitHub}}}
+    %         \resumeItemListStart
+    %             \resumeItem{Built an agent that speedruns through Wikipedia pages by selecting the most relevant outgoing link at each step.}
+    %             \resumeItem{Implemented two players: a fast \textbf{SBERT} vector-similarity model and a reasoning-based \textbf{Gemini LLM} agent for accurate pathfinding.}
+    %             \resumeItem{Automated gameplay using \textbf{Playwright}: scrolling, locating links, expanding collapsible sections, highlighting targets, and clicking pages.}
+    %             \resumeItem{Added run tracking with JSON logging, performance metrics, and optional browser visualisation for real-time playback.}
+    %         \resumeItemListEnd
+    %     \resumeSubHeadingListEnd
+    % \vspace{-15pt}
 
 %         \resumeProjectHeading
 %             {\textbf{\normalsize{CodeNexus (Custom Code Editor for Python)}} $|$ \emph{Python, PyQt5, QScintilla, Jedi}}{\href{https://github.com/ankushhKapoor/CodeNexus-Custom-Python-Editor-IDE}{\underline{GitHub}}}
