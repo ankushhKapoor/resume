@@ -15,15 +15,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: Ankush_Kapoor_Resume.tex
-
-      - name: Convert PDF to PNG and add to img/ dir
+      - name: Convert PDF to PNG
         run: |
           sudo apt update
           sudo apt install -y poppler-utils
+          rm -rf Ankush_Kapoor_Resume.png
           pdftoppm -rx 300 -ry 300 "Ankush_Kapoor_Resume.pdf" resume -png
           mv "resume-1.png" "Ankush_Kapoor_Resume.png"
           
