@@ -18,22 +18,14 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex
+          root_file: Ankush_Kapoor_Resume.tex
 
-      - name: Rename PDF and add to pdf/ dir
-        run: |
-          mkdir -p pdf
-          rm -f pdf/*.pdf
-          mv resume.pdf "pdf/ankush-kapoor-resume.pdf"
-        
       - name: Convert PDF to PNG and add to img/ dir
         run: |
           sudo apt update
           sudo apt install -y poppler-utils
-          mkdir -p img
-          rm -f img/*.png
-          pdftoppm -rx 300 -ry 300 "pdf/ankush-kapoor-resume.pdf" img/resume -png
-          mv "img/resume-1.png" "img/ankush-kapoor-resume.png"
+          pdftoppm -rx 300 -ry 300 "Ankush_Kapoor_Resume.pdf" resume -png
+          mv "resume-1.png" "Ankush_Kapoor_Resume.png"
           
       - name: Commit and push changes
         id: push_check
@@ -51,6 +43,7 @@ jobs:
           else
             git commit -m "chore: update Resume PDF and PNG files"
             git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+            git pull --rebase origin main
             git push
             # echo "deployed=true" >> $GITHUB_OUTPUT
           fi
