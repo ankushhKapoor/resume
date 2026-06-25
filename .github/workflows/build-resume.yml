@@ -19,9 +19,9 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y poppler-utils
-          rm -rf Ankush_Kapoor_Resume.png
-          pdftoppm -rx 300 -ry 300 "Ankush_Kapoor_Resume.pdf" resume -png
-          mv "resume-1.png" "Ankush_Kapoor_Resume.png"
+          rm -rf Ankush-Kapoor-Resume.png
+          pdftoppm -rx 300 -ry 300 "Ankush-Kapoor-Resume.pdf" resume -png
+          mv "resume-1.png" "Ankush-Kapoor-Resume.png"
           
       - name: Commit and push changes
         id: push_check
