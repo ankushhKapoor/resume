@@ -29,7 +29,7 @@
 \input{glyphtounicode}
 
 \usepackage{xcolor}
-\hypersetup{colorlinks,urlcolor=blue}
+\hypersetup{colorlinks,allcolors=black}
 
 
 % ----------FONT OPTIONS----------
@@ -41,7 +41,7 @@
 
 % serif
 % \usepackage{CormorantGaramond}
-\usepackage{charter}
+% \usepackage{charter}
 % \usepackage{times}
 % \usepackage{helvet}
 
@@ -52,11 +52,10 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-0.83in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.7in}
 \addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
@@ -68,7 +67,7 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-3pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
 
 % Ensure that the generated PDF is machine readable/ATS parsable.
 \pdfgentounicode=1
@@ -77,7 +76,7 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-3pt}}
+    {#1 \vspace{-1pt}}
   }
 }
 
@@ -90,26 +89,26 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \vspace{-2pt}\textbf{#1} & \textbf{\small #2} \\
+      \vspace{-2pt}\textbf{#1} & \textbf{\small #2} \\[2pt]
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-8pt}
+    \end{tabular*}\vspace{-6pt}
 } % education, experience heading and first line ka vsapce
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-8pt}
+    \end{tabular*}
 }
 
 \newcommand{\resumeProjectHeading}[2]{ 
     \item
     \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-8pt}
+    \end{tabular*}\vspace{-6pt}
 } % project heading and first line ka vsapce
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-9pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-7pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -117,8 +116,9 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-9pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
+\usepackage{enumitem}
 % -------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -126,21 +126,42 @@
 \begin{document}
 
 
-% ----------HEADING----------
+% % ----------HEADING----------
+
+% \begin{center}
+%     {\huge \scshape \textbf{Ankush Kapoor}} \\ \vspace{2pt}
+%     % \footnotesize
+%     +91 8108405154 $|$  \href{https://ankushhkapoor.vercel.app}{ankushhkapoor.vercel.app} $|$
+%     \href{mailto:work.ankushkapoor1626@gmail.com}{work.ankushkapoor1626@gmail.com} \\
+%     \href{https://github.com/ankushhKapoor}{github.com/ankushhKapoor} $|$
+%     \href{https://linkedin.com/in/ankushhKapoor}{linkedin.com/in/ankushhKapoor}    \vspace{-8pt}
+% %    \small
+% %     \mbox{%
+% %     \href{https://ankushhkapoor.vercel.app}{ankushhkapoor.vercel.app}\hspace{0.2em}$|$\hspace{0.2em}\href{https://github.com/ankushhKapoor}{github.com/ankushhKapoor}\hspace{0.2em}$|$\hspace{0.2em}\href{https://linkedin.com/in/ankushhKapoor}{linkedin.com/in/ankushhKapoor}\hspace{0.2em}$|$\hspace{0.2em}\href{mailto:work.ankushkapoor1626@gmail.com}{work.ankushkapoor1626@gmail.com}%
+% %     }
+%     \vspace{-5pt}
+% \end{center}
+
+
+
+% ---------- HEADING ----------
 
 \begin{center}
-    {\huge \scshape \textbf{Ankush Kapoor}} \\ \vspace{2pt}
-    % \footnotesize
-    +91 8108405154 $|$  \href{https://ankushhkapoor.vercel.app}{ankushhkapoor.vercel.app} $|$
-    \href{mailto:work.ankushkapoor1626@gmail.com}{work.ankushkapoor1626@gmail.com} \\
-    \href{https://github.com/ankushhKapoor}{github.com/ankushhKapoor} $|$
-    \href{https://linkedin.com/in/ankushhKapoor}{linkedin.com/in/ankushhKapoor}    \vspace{-8pt}
-%    \small
-%     \mbox{%
-%     \href{https://ankushhkapoor.vercel.app}{ankushhkapoor.vercel.app}\hspace{0.2em}$|$\hspace{0.2em}\href{https://github.com/ankushhKapoor}{github.com/ankushhKapoor}\hspace{0.2em}$|$\hspace{0.2em}\href{https://linkedin.com/in/ankushhKapoor}{linkedin.com/in/ankushhKapoor}\hspace{0.2em}$|$\hspace{0.2em}\href{mailto:work.ankushkapoor1626@gmail.com}{work.ankushkapoor1626@gmail.com}%
-%     }
-    \vspace{-5pt}
+    {\huge \scshape \textbf{Ankush Kapoor}}\\[6pt]
+Mumbai, India \hspace{5pt}$|$\hspace{5pt}
+\raisebox{-0.15\height}{\faPhone}~+91 8108405154 \hspace{5pt}$|$\hspace{5pt}
+\href{mailto:work.ankushkapoor1626@gmail.com}
+{\raisebox{-0.15\height}{\faEnvelope}~\underline{work.ankushkapoor1626@gmail.com}}\\[4pt]
+\href{https://ankushhkapoor.vercel.app}
+{\raisebox{-0.15\height}{\faGlobe}~\underline{ankushhkapoor.vercel.app}}\hspace{5pt}$|$\hspace{5pt}
+\href{https://linkedin.com/in/ankushhKapoor}
+{\raisebox{-0.15\height}{\faLinkedin}~\underline{ankushhKapoor}}\hspace{5pt}$|$\hspace{5pt}
+\href{https://github.com/ankushhKapoor}
+{\raisebox{-0.15\height}{\faGithub}~\underline{ankushhKapoor}}
+    \vspace{-8pt}
 \end{center}
+
+
 
 % -----------EDUCATION-----------
 \section{Education}
@@ -156,7 +177,7 @@
                 % \resumeItem{\textbf{Relevant Courses}: Object-Oriented Programming, Data Structures \& Algorithms, Database Management Systems}
             \resumeItemListEnd
     \resumeSubHeadingListEnd
-\vspace{-13pt}
+
 
 % -----------EXPERIENCE-----------
 \section{Experience}
@@ -173,14 +194,14 @@
 
 \resumeSubHeadingListStart
     \resumeSubheading
-    {Open World Holidays Framework}{\emph{Remote} $|$ \href{https://summerofcode.withgoogle.com/programs/2026/projects/3FLbU2v4}{GSoC Project Page}}
+    {Open World Holidays Framework}{\emph{Remote} $|$ \href{https://summerofcode.withgoogle.com/programs/2026/projects/3FLbU2v4}{\underline{GSoC Project Page}}}
     {Google Summer of Code 2026 Contributor (Python Software Foundation)}{May 2026 -- Oct 2026}
     \resumeItemListStart
         \resumeItem{Implemented verified holiday coverage for \textbf{India} at \textbf{national} level and across all \textbf{28 states + 8 UTs}, cross-referenced against official government notices and calendars.}
         \resumeItem{Built a \textbf{solar and lunisolar calendar generator} for Hindu festivals including \textbf{Diwali, Holi, and Makar Sankranti}, using astronomical and mathematical calculations (tithi, paksha, sunrise) to cover approximately \textbf{60 holidays}.}
         \resumeItem{Added localized holiday names across \textbf{10 Indian languages} for regional users.}
     \resumeItemListEnd
-\vspace{-9pt}
+\vspace{-15pt}
 
     \resumeSubheading
     {}{}
@@ -191,8 +212,6 @@
         \resumeItem{Added Hindi and Mongolian translations, improving native-language accessibility for regional users.}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
-\vspace{-13pt}
-
 
 % -----------INTERNSHIPS-----------
 % \section{Internships}
@@ -221,7 +240,7 @@
     \vspace{-7pt}
     \resumeSubHeadingListStart
         \resumeProjectHeading
-            {\textbf{\normalsize{BaseKernel (Custom 32 bit Kernel)}} $|$ \emph{C, NASM, QEMU}}{\href{https://github.com/ankushhKapoor/BaseKernel}{GitHub}}
+            {\textbf{\normalsize{BaseKernel (Custom 32 bit Kernel)}} $|$ \emph{C, NASM, QEMU}}{\href{https://github.com/ankushhKapoor/BaseKernel}{\underline{GitHub}}}
             \resumeItemListStart
                 \resumeItem{Built a \textbf{32-bit protected mode} kernel from scratch, \textbf{bootstrapped} from \textbf{real mode}.}
             \resumeItem{Implemented \textbf{bootloader}, \textbf{GDT}, \textbf{IDT}, \textbf{ISR}, and \textbf{IRQ} handling for low-level system control.}
@@ -231,7 +250,7 @@
         \vspace{-13pt}
 
                 \resumeProjectHeading
-            {\textbf{\normalsize{Transformer From Scratch (Neural Machine Translation)}} $|$ \emph{Python, PyTorch}}{\href{https://github.com/ankushhKapoor/transformer-from-scratch}{GitHub}}
+            {\textbf{\normalsize{Transformer From Scratch (Neural Machine Translation)}} $|$ \emph{Python, PyTorch}}{\href{https://github.com/ankushhKapoor/transformer-from-scratch}{\underline{GitHub}}}
             \resumeItemListStart
                \resumeItem{Developed a complete \textbf{Transformer architecture} from scratch using \textbf{PyTorch}, manually building \textbf{multi-head attention}, \textbf{encoder-decoder blocks}, and \textbf{positional encoding}.}
                 \resumeItem{Trained a bilingual \textbf{NMT model} on \textbf{OPUS Books} using \textbf{greedy and beam search} decoding, implementing \textbf{learning-rate warmup} and \textbf{label smoothing} for optimized convergence.}
@@ -240,7 +259,7 @@
         \vspace{-13pt}
 
         \resumeProjectHeading
-            {\textbf{\normalsize{Alloc (Custom Memory Allocator in C)}} $|$ \emph{C, NASM}}{\href{https://github.com/ankushhKapoor/alloc}{GitHub}}
+            {\textbf{\normalsize{Alloc (Custom Memory Allocator in C)}} $|$ \emph{C, NASM}}{\href{https://github.com/ankushhKapoor/alloc}{\underline{GitHub}}}
             \resumeItemListStart
         \resumeItem{Created a 32-bit allocator mimicking \textbf{malloc()} and \textbf{free()} over a 1 GB virtual heap.}
                 \resumeItem{Implemented \textbf{alloc(bytes)} to allocate memory in words by taking size in bytes as input.}
@@ -249,7 +268,19 @@
             \resumeItemListEnd
         \resumeSubHeadingListEnd
         \vspace{-12pt}
-    
+        
+% -----------ACHIEVENEMENTS & CERTIFICATIONS-----------
+\section{Achievements \& Certifications}
+    \resumeItemListStart
+        \resumeItem{\textbf{3rd Place} in Cognitive Clash (AI-ML Showdown) Hackathon - built an \textbf{AI Virtual Try-On} System \hfill Oct 2026}
+        \vspace{-2pt}
+        \resumeItem{\textbf{Machine Learning} with \textbf{Python} Certification - L\&T Skill Trainers Academy, Mumbai (Residential Course) \hfill Jun 2026}
+    \resumeItemListEnd
+
+\newpage
+\vspace*{1pt}
+\vspace{-15pt}
+
 % -----------SKILLS-----------
 \section{Technical Skills}
     \vspace{-2pt}
@@ -267,31 +298,22 @@
             \end{tabular}
         }}
     \end{itemize}
-\vspace{-20pt}
-    
-% -----------ACHIEVENEMENTS & CERTIFICATIONS-----------
-\section{Achievements \& Certifications}
-    \resumeItemListStart
-        \resumeItem{\textbf{3rd Place} in Cognitive Clash (AI-ML Showdown) Hackathon - built an \textbf{AI Virtual Try-On} System \hfill Oct 2026}
-        \resumeItem{\textbf{Machine Learning} with \textbf{Python} Certification -- L\&T Skill Trainers Academy, Mumbai (Residential Course) \hfill Jun 2026}
-    \resumeItemListEnd
-\vspace{-7pt}
 
 % -----------EXTRACURRICULAR ACTIVITY-----------
 \section{Extracurricular Activity}
     \resumeSubHeadingListStart
         \resumeSubheading
-            {\textbf{\normalsize{Our Tech Community (OTC)}} $|$ {\normalfont \href{https://ourtech.community}{ourtech.community}}}{Jul 2025 -- Present}
+            {\textbf{\normalsize{Our Tech Community (OTC)}} $|$ {\normalfont \href{https://ourtech.community}{\underline{ourtech.community}}}}{Jul 2025 -- Present}
             {Co-Organiser}{}
             \resumeItemListStart
                 \resumeItem{Co-organize and grow a vibrant, inclusive, and open-for-all tech community of currently \textbf{600+ members}.}
-                \resumeItem{Plan, organize, and execute OTC's \textbf{flagship programs}, including weekly \href{https://catchup.ourtech.community/}{catchups} and \textbf{technical} \href{https://talks.ourtech.community/}{talks}.}
+                \resumeItem{Plan, organize, and execute OTC's \textbf{flagship programs}, including weekly \href{https://catchup.ourtech.community/}{\underline{catchups}} and \textbf{technical} \href{https://talks.ourtech.community/}{\underline{talks}}.}
                 \resumeItem{Oversee community operations, including \textbf{technical setup and maintenance} for events, ensuring smooth execution and \textbf{comprehensive documentation}.}
             \resumeItemListEnd
             \vspace{3pt}
 
     \resumeSubheading
-        {\textbf{\normalsize{Rotary Divyang Center}} $|$ {\normalfont \href{https://rotarydivyangcenter.org}{rotarydivyangcenter.org}}}{Feb 2026 -- Apr 2026}
+        {\textbf{\normalsize{Rotary Divyang Center}} $|$ {\normalfont \href{https://rotarydivyangcenter.org}{\underline{rotarydivyangcenter.org}}}}{Feb 2026 -- Apr 2026}
         {Social Service Intern}{}
         \resumeItemListStart
             \resumeItem{Supported operations at a \textbf{prosthetics and orthotics center} providing \textbf{artificial limbs}, assisting patients with administration and coordination.}
